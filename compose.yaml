@@ -1,0 +1,7 @@
+services:
+  freckles:
+    build: .
+    volumes:
+      - "$HOME/.config/gh:/root/.config/gh:ro"
+      - "$HOME/.ssh:/root/.ssh:ro"
+      - '.:/freckles/:ro'
