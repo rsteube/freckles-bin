@@ -1,0 +1,20 @@
+[book]
+authors = ["rsteube"]
+language = "en"
+multilingual = false
+src = "src"
+title = "freckles"
+description = "A simple dotfiles manager."
+
+[output.html]
+default-theme = "Latte"
+preferred-dark-theme = "Mocha"
+additional-css = ["asciinema/asciinema-player.css", "./theme/catppuccin.css"]
+additional-js = ["asciinema/asciinema-player.min.js", "asciinema/load.js"]
+git-repository-url = "https://github.com/carapace-sh/freckles"
+edit-url-template = "https://github.com/carapace-sh/freckles/edit/master/docs/{path}"
+
+[output.html.fold]
+enable = true
+
+[output.linkcheck]
