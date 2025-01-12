@@ -8,11 +8,16 @@
 
 ## Clone
 
+Completion for the `--clone` flag is provided by [ActionRepositorySearch].
+
 ```go
 {{#include ../../../cmd/freckles/cmd/init.go:flagcompletion}}
 ```
 
-> Macros provide a way to **loosely** leverage completions provided by a different application.
+> [Macros] provide a way to _loosely_ share [Actions] between applications.
 
+[Actions]:https://carapace-sh.github.io/carapace/carapace/action.html
+[ActionRepositorySearch]:https://pkg.go.dev/github.com/carapace-sh/carapace-bin/pkg/actions/tools/git#ActionRepositorySearch
 [Freckles]:https://github.com/rsteube/freckles
 [Git]:https://git-scm.com/
+[Macros]:https://carapace-sh.github.io/carapace-spec/carapace-spec/macros.html
