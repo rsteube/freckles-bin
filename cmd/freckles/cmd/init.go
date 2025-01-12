@@ -5,7 +5,7 @@ import (
 	"os/exec"
 
 	"github.com/carapace-sh/carapace"
-	"github.com/carapace-sh/carapace-bin/pkg/actions/tools/git"
+	"github.com/carapace-sh/carapace-bridge/pkg/actions/bridge"
 	"github.com/rsteube/freckles/pkg/freckles"
 	"github.com/spf13/cobra"
 )
@@ -38,6 +38,6 @@ func init() {
 	rootCmd.AddCommand(initCmd)
 
 	carapace.Gen(initCmd).FlagCompletion(carapace.ActionMap{
-		"clone": git.ActionRepositorySearch(git.SearchOpts{}.Default()),
+		"clone": bridge.ActionMacro("carapace.tools.git.RepositorySearch"),
 	})
 }
