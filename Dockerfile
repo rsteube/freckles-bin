@@ -15,3 +15,5 @@ RUN mkdir -p /root/.config/carapace \
 RUN echo "[credential \"https://github.com\"]\n\
         helper = !gh auth git-credential\n"\
       > /root/.gitconfig
+
+ENV PATH=/freckles/cmd/freckles:$PATH

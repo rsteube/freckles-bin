@@ -4,5 +4,4 @@ services:
     volumes:
       - "$HOME/.config/gh:/root/.config/gh:ro"
       - "$HOME/.ssh:/root/.ssh:ro"
-      - './cmd/freckles/freckles:/usr/local/bin/freckles:ro'
-      # - '.:/freckles/:ro'
+      - '.:/freckles/:ro'
