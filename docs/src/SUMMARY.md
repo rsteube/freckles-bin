@@ -1,5 +1,5 @@
 # Summary
 
 - [Freckles](./freckles.md)
-  - [Action](./action.md)
-  - [Git](./git.md)
+  - [Init](./freckles/init.md)
+  - [Edit](./freckles/edit.md)

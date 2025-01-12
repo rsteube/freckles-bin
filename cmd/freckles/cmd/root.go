@@ -7,7 +7,7 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "freckles",
-	Short: "simple dotfile manager",
+	Short: "A simple dotfile manager.",
 	Example: `  Completion:
     bash:       source <(freckles _carapace)
     elvish:     eval (freckles _carapace|slurp)

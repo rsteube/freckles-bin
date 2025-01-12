@@ -16,7 +16,7 @@ builds:
 brews:
   -
     name: freckles
-    description: "A simple dotfiles manager."
+    description: "A simple dotfile manager."
     homepage: "https://github.com/rsteube/freckles"
     license: "MIT"
     repository:
@@ -27,7 +27,7 @@ brews:
 
 aurs:
   -
-    description: "A simple dotfiles manager."
+    description: "A simple dotfile manager."
     homepage: "https://github.com/rsteube/freckles"
     license: "MIT"
     maintainers:
@@ -42,7 +42,7 @@ aurs:
 
 nfpms:
   -
-    description: "A simple dotfiles manager."
+    description: "A simple dotfile manager."
     homepage: "https://github.com/rsteube/freckles"
     license: "MIT"
     maintainer: rsteube <rsteube@users.noreply.github.com>

@@ -13,27 +13,22 @@ import (
 var initCmd = &cobra.Command{
 	Use:   "init",
 	Short: "init freckles folder",
-	Run: func(cmd *cobra.Command, args []string) {
-		// TODO handle error when git is missing
+	RunE: func(cmd *cobra.Command, args []string) error {
+		c := exec.Command("git", "init", freckles.FreckleDir())
 		if cmd.Flag("clone").Changed {
-			c := exec.Command("git", "clone", cmd.Flag("clone").Value.String(), freckles.FreckleDir())
-			c.Stdin = os.Stdin
-			c.Stdout = os.Stdout
-			c.Stderr = os.Stderr
-			c.Run()
-		} else {
-			c := exec.Command("git", "init", freckles.FreckleDir())
-			c.Stdin = os.Stdin
-			c.Stdout = os.Stdout
-			c.Stderr = os.Stderr
-			c.Run()
+			c = exec.Command("git", "clone", cmd.Flag("clone").Value.String(), freckles.FreckleDir())
+		}
+		c.Stdin = os.Stdin
+		c.Stdout = os.Stdout
+		c.Stderr = os.Stderr
+		if err := c.Run(); err != nil {
+			return err
 		}
 
 		if _, err := os.Stat(freckles.FreckleDir() + ".frecklesignore"); os.IsNotExist(err) {
-			if err := os.WriteFile(freckles.FreckleDir()+".frecklesignore", []byte(".git\n.frecklesignore\n"), os.ModePerm); err != nil {
-				panic(err.Error())
-			}
+			return os.WriteFile(freckles.FreckleDir()+".frecklesignore", []byte(".git\n.frecklesignore\n"), os.ModePerm)
 		}
+		return nil
 	},
 }
 

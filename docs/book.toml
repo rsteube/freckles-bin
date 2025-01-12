@@ -4,7 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "freckles"
-description = "A simple dotfiles manager."
+description = "A simple dotfile manager."
 
 [output.html]
 default-theme = "Latte"
