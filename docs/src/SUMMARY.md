@@ -1,5 +1,6 @@
 # Summary
 
 - [Freckles](./freckles.md)
-  - [Init](./freckles/init.md)
-  - [Edit](./freckles/edit.md)
+  - [Cmd](./freckles/cmd.md)
+    - [Init](./freckles/cmd/init.md)
+    - [Edit](./freckles/cmd/edit.md)

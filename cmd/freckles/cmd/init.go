@@ -19,13 +19,13 @@ var initCmd = &cobra.Command{
 		if cmd.Flag("clone").Changed {
 			c = exec.Command("git", "clone", cmd.Flag("clone").Value.String(), freckles.FreckleDir())
 		}
-		// ANCHOR_END: command
 		c.Stdin = os.Stdin
 		c.Stdout = os.Stdout
 		c.Stderr = os.Stderr
 		if err := c.Run(); err != nil {
 			return err
 		}
+		// ANCHOR_END: command
 
 		if _, err := os.Stat(freckles.FreckleDir() + ".frecklesignore"); os.IsNotExist(err) {
 			return os.WriteFile(freckles.FreckleDir()+".frecklesignore", []byte(".git\n.frecklesignore\n"), os.ModePerm)
